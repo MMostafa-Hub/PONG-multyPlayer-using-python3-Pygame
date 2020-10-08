@@ -134,7 +134,7 @@ class button():  # button Object
         return False
 
 
-def pausedGameUpdate(screen):
+def pausedGameUpdate(screen): # to pause the game hit ESC
     screen.fill(BLACK)
     QuitButton.draw(screen)
     playAgainButton.draw(screen)
@@ -207,13 +207,13 @@ while running:
                 pause = not pause
     keys = pygame.key.get_pressed()  # list of all keys got pressed
 
-    if keys[pygame.K_UP]:
+    if keys[pygame.K_UP]:# to move player 1 (left hand side) up 
         p1.move(-0.5)
-    if keys[pygame.K_DOWN]:
+    if keys[pygame.K_DOWN]:# to move player 1 (left hand side) down 
         p1.move(0.5)
-    if keys[pygame.K_w]:
+    if keys[pygame.K_w]:# to move player 2 (right hand side) up 
         p2.move(-0.5)
-    if keys[pygame.K_s]:
+    if keys[pygame.K_s]:# to move player 2 (right hand side) down 
         p2.move(0.5)
 
     if pause == False:
